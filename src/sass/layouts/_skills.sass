@@ -1,0 +1,101 @@
+.skills
+	padding: 
+		top: rem-calc(40px)
+	border-top: 
+		width: 2px
+		style: solid
+		color: #f0f0f0
+	border-bottom: 
+		width: 2px
+		style: solid
+		color: #f0f0f0
+	background-image: url(../images/bg-skills.jpg)
+
+
+
+.skill--animation
+	animation: out--skills 1s ease-out forwards
+	opacity: 0
+
+
+@keyframes out--skills
+	0%
+		opacity: 0
+		transform: translateX(1900px) 
+	
+	70%
+		opacity: 0.2
+	90%
+		opacity: 0.8
+
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+.skills-list
+	margin: 0
+	margin-top: 25px
+	padding: 0
+	width: 100%
+	list-style: none
+
+
+.skills-item
+	display: inline-block
+	width: 100%
+	max-width: rem-calc(114px)
+	margin:
+		right: 6.5%
+		bottom: rem-calc(40px)
+	&:nth-child(4n)
+		margin-right: 0
+	@include breakpoint(medium down)
+		margin:
+			right: 6.5%
+		&:nth-child(4n)
+			margin-right: 6.5%
+	@include breakpoint(small only)
+		margin-right: 0
+		&:nth-child(4n)
+			margin-right: 0
+
+.skills-box
+	vertical-align: middle
+	display: inline-block
+	border-radius: 5px
+	width: 19px
+	height: 19px
+	background-color: #eeeeee
+
+.skills-box.is-active
+	position: relative
+	background-color: $primary-color
+	&::before,&::after
+		position: absolute
+		top: 50%
+		left: 50%
+		content: ""
+		display: block
+		height: 2px
+		background-color: #fff
+	&::before
+		width: 4px
+		transform: rotate(45deg)
+		margin:
+			top: 0
+			left: -6.5px
+	&::after
+		width: 13px
+		margin:
+			top: -2px
+			left: -5.5px
+		transform: rotate(-45deg)
+
+
+.skills-name
+	vertical-align: middle
+	display: inline-block
+	margin-left: 8px
+	text-transform: uppercase
+	font-size: rem-calc(12px)
+	

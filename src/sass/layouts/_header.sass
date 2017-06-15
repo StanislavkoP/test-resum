@@ -1,0 +1,81 @@
+.information-human
+	position: relative
+	background:
+		image: url(../images/bg-header.jpg)
+		size: cover
+
+.information-human--animation
+	animation: out 1s ease-out forwards
+	opacity: 0
+
+
+@keyframes out
+	0%
+		opacity: 0
+		transform: translateX(-1900px) 
+	
+	70%
+		opacity: 0.2
+	90%
+		opacity: 0.8
+
+	100%
+		opacity: 1
+		transform: translateX(0)
+
+.information-human-form
+	position: relative
+	padding:
+		top: $vertical-gutter * 2
+		bottom: $vertical-gutter * 2
+
+.form-left
+	@include breakpoint(small)
+		text-align: center
+
+.form-avatar
+	overflow: hidden
+	max-width: rem-calc(139px)
+	border-radius: 50%
+	@include breakpoint(medium down)
+		display: inline-block
+		margin-bottom: $vertical-gutter
+		max-width: rem-calc(179px)
+
+
+.form-avatar img
+	width: 100%
+	height: auto
+
+.inform-field
+	margin-bottom: $vertical-gutter * 2
+	border-bottom: 
+		width: rem-calc(2px)
+		style: solid
+		color: #333333
+	font-size: rem-calc(12px)
+	text-transform: uppercase
+	&:last-child
+		margin-bottom: 0
+
+.inform-field a
+	color: $body-font-color
+	&:hover
+		text-decoration: underline
+
+.form-print
+	position: absolute
+	top: 50%
+	right: rem-calc(4px)
+	margin-top: rem-calc(-49px)
+	max-width: rem-calc(184px)
+	@include breakpoint(smedium down)
+		max-width: rem-calc(120px)
+		margin-top: rem-calc(100px)
+	@include breakpoint(medium only)
+		max-width: rem-calc(120px)
+		margin-top: rem-calc(80px)
+
+.form-print img
+	width: 100%
+	height: auto

@@ -1,0 +1,42 @@
+*
+  box-sizing: border-box
+
+.icon
+  display: inline-block
+  vertical-align: middle
+
+[type='text'],
+[type='search'],
+[type='tel'],
+[type='email'],
+[type='number']
+  appearance: none
+
+
+.site-container
+  margin: 0 auto
+  padding:
+    left: rem-calc(map-get($grid-column-gutter, small))
+    right: rem-calc(map-get($grid-column-gutter, small))
+  +breakpoint(medium)
+    max-width: $global-width + rem-calc(map-get($grid-column-gutter, medium))
+    padding:
+      left: rem-calc(map-get($grid-column-gutter, medium)) / 2
+      right: rem-calc(map-get($grid-column-gutter, medium)) / 2
+    box-sizing: content-box
+    padding:
+      top: $vertical-gutter * 3.75
+      bottom: $vertical-gutter * 6.25
+    
+
+
+.container
+  margin: 0 auto
+  max-width: $global-width
+
+
+.title 
+  color: $black
+  font:
+    size: rem-calc(18px)
+    weight: 600

@@ -1,0 +1,80 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+  head(lang="en")
+    include pug/metatags.pug
+    +title('Главная')
+    include pug/styles.pug
+  body
+    .site-container
+        section.information-human.information-human--animation
+          .information-human-form
+            .row
+              .medium-2.small-4.small-centered.medium-uncentered.columns
+                .form-left
+                  .form-avatar
+                    img.icon(src="../images/user-avatar-header.jpg")
+              .medium-6.small-8.columns
+                .form-right
+                  .form-inform
+                    .inform-field Станислав
+                    .inform-field 28 июня 1995 г.
+                    .inform-field Украина, г.Запорожье
+                    .inform-field
+                      a(href="https://vk.com/idstanislavko") Вконтакте
+            .form-print
+              img.icon(src="../images/print.svg")
+        section.skills.skill--animation
+          .row
+            .medium-8.columns
+                h2.title Навыки
+                ul.skills-list
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name Html 5
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name Sass
+                  li.skills-item
+                    span.skills-box
+                    span.skills-name VanillaJS
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name Git
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name CSS3
+                  li.skills-item
+                    span.skills-box
+                    span.skills-name Less
+                  li.skills-item
+                    span.skills-box
+                    span.skills-name Angular
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name Foundation
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name БЭМ
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name Gulp
+                  li.skills-item
+                    span.skills-box
+                    span.skills-name jQuery
+                  li.skills-item
+                    span.skills-box.is-active
+                    span.skills-name Bootstrap
+        section.skill-js.skill-js--animation
+          .row
+            .medium-4.columns
+              .skill-js__diagrama
+                include pug/svg.pug
+            .medium-3.columns.end
+              .skill-js__level
+                h2.title Мой уровень владения Java Script
+                .skill-js__level-numbers
+                  span.skill-js__level-number 900
+    include pug/scripts.pug
